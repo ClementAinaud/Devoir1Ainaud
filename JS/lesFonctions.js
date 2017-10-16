@@ -16,12 +16,12 @@ function  getLesRayons(numSecteur){
         }
         );
 }
-function  getLesEmployes(numE){
+function  getLesEmployes(){
     $.ajax(
         {  
             type:"get",
             url:"index.php/Ctrl_Accueil/getLesEmployes",
-           data:"numE="+numE,
+           
              success:function(data)
             {
                 $('#divEmployes').empty();

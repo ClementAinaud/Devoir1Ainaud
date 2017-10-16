@@ -20,9 +20,9 @@ class Ctrl_Accueil extends CI_Controller{
       $this->load->view('v_Rayons',$data);
     }
     public function  getLesEmployes(){
-        $numE = $_GET['numE'];
+       
         $this->load->model('Model_Employes');
-        $data['lesEmployes'] = $this->Model_Employes->getLesEmployes($numE);
+        $data['lesEmployes'] = $this->Model_Employes->getLesEmployes();
         $this->load->view('v_Employes',$data);
     }
     public function getNombresHeures(){
