@@ -53,7 +53,7 @@ and open the template in the editor.
     
     <body>
         <h2>Listes des secteurs</h2>
-        <select id="lstSecteurs">
+        <select id="lstSecteurs" onchange="getLesRayons(this.value)">
         <?php 
         foreach ($lesSecteurs as $secteur) {
       echo "<option id='opt1' value='".$secteur->numS."'>".$secteur->nomS."</option>";      

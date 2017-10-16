@@ -1,8 +1,15 @@
 <?php
 
 class Ctrl_Accueil extends CI_Controller{
+    
+     function __construct()
+    {
+        parent::__construct();
+      $this->load->model('Model_Secteurs');
+    }
+    
     public function index(){
-        $this->load->model('Model_Secteurs');
+        
         $data['lesSecteurs'] = $this->Model_Secteurs-> getLesSecteurs();
         $this->load->view('v_Accueil',$data);
     }
@@ -13,9 +20,9 @@ class Ctrl_Accueil extends CI_Controller{
       $this->load->view('v_Rayons',$data);
     }
     public function  getLesEmployes(){
-        
+        $numE = $_GET['numE'];
         $this->load->model('Model_Employes');
-        $data['lesEmployes'] = $this->Model_Employes->getLesEmployes();
+        $data['lesEmployes'] = $this->Model_Employes->getLesEmployes($numE);
         $this->load->view('v_Employes',$data);
     }
     public function getNombresHeures(){

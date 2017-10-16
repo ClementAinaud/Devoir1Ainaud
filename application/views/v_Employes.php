@@ -9,6 +9,25 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <script type="text/javascript" src="JQuery/jquery-3.1.1.js"></script>
+         <script type="text/javascript" src="JS/lesFonctions.js"></script>
+         <script type="text/javascript">
+              $
+           (
+               function()
+                {
+                    
+                    
+                   // Au chargement de la page
+                        getNombresHeures();
+                        
+                  }
+            );
+             
+             
+             
+             
+         </script>
     </head>
     <body>
           <div id="Tableau">
@@ -32,8 +51,8 @@ and open the template in the editor.
           
             echo"<td>".$employes->numE."</td>";
             echo"<td>".$employes->prenomE."</td>";
-//            echo"<td>".$employes->date."</td>";
-//            echo"<td>".$employes->temps."</td>";
+           echo"<td>".$employes->date."</td>";
+          echo"<td>".$employes->temps."</td>";
             
         
             
